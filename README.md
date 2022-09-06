@@ -1,2 +1,3 @@
-# dark-mode-downloader
-Why is it named that way ? You'll know soon 😉
+# junk repo
+
+This is repository is created for zero reasons.
