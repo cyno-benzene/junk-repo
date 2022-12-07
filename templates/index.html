@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <form action="/" method="POST">
+        <label for="phNo">Enter your phone number</label>
+        <input 
+        type="number" 
+        maxlength="10"
+        name="phNo" 
+        required
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
+        <script>
+            $(function () {
+               $( "input" ).change(function() {
+               var max = parseInt($(this).attr('max'));
+               var min = parseInt($(this).attr('min'));
+               if ($(this).val() > max)
+               {
+                  $(this).val(max);
+               }
+               else if ($(this).val() < min)
+               {
+                  $(this).val(min);
+               }       
+             }); 
+            });
+
+        </script>
+        <input type="submit" value=" Generate"></input>
+    </form>
+
+    <!-- <img src="/plot.png" alt="my plot"> -->
+</button>
+</body>
+</html>
