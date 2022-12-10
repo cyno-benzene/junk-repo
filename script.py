@@ -1,5 +1,6 @@
 import numpy as np
 from matplotlib import pyplot as plt
+plt.switch_backend('agg')
 import random
 import io,os
 from matplotlib.figure import Figure
@@ -77,21 +78,16 @@ def shaper(res, bit):
     new = np.reshape(nump, (bit,-1))
     # print(new)                           
     del nump
-    plt.imshow(new, cmap=random.choice(cmap))
-    plt.savefig('foo.png')
-    del plt
+    img = plt.imshow(new, cmap=random.choice(cmap))
+    plt.axis('off')
+    plt.savefig('foo.png', bbox_inches='tight')
+    del new
 
-
-def identify():
-    #convert binary to number
-    pass
 
 
 # x = input("Enter your phone number")
 x = 9867981859
 resol = 0
-plt.rcParams["figure.figsize"] = [7.50, 3.50]
-plt.rcParams["figure.autolayout"] = True
 x = int(dec2bin(x))
 res = list(map(int, str(x)))
 bit=0
