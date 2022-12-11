@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+
+
 </head>
 <body>
-    <h1>Hello</h1>
     <form action="/" method="POST">
-        <label for="phNo">Enter your phone number</label>
+        <h1>
+            <a href="/">Phone Number Encoder</a>    
+        </h1>
         <input 
+        class="form__input"
         type="number" 
         maxlength="10"
-        name="phNo" 
+        name="phNo"
+        placeholder="Enter your phone number"
         required
         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
         <script>
@@ -31,12 +38,45 @@
                }       
              }); 
             });
-
         </script>
-        <input type="submit" value=" Generate"></input>
-    </form>
 
-    <!-- <img src="/plot.png" alt="my plot"> -->
-</button>
+        <p>Your number is safe no need to worry !</p>
+
+
+    <input class="button-4 subm" type="submit" value="Generate" >
+    <img id="picture" src="data:image/png;base64,{{ img_data }}" height="300px" width="300px" />
+    <p>Refresh to change color • Right click to save image • Click on title to reset</p>
+    <span id="text"> 
+        The tool just converts phone number to PNG images that be used as a colorful way to share numbers easily. There is no   special algorithm used, the number is simply converted to binary. The first 32-33 something bytes in the image can help you calculate the number. Remaining squares are shuffled or reversed strings concantenated according the number of bits (currently just shows 32bits , value can be changed upto 128bit).
+        
+        The idea is to have a way to share phone numbers just like QR codes. Rather the image leaves an abstract pattern which one can stick on to his phone :)
+    </span>
+<div class="btn-container">
+    <button class="button-4" id="toggle">Read More</button>
+</div>
+<script>
+    $(document).ready(function() {
+      $("#toggle").click(function() {
+        var elem = $("#toggle").text();
+        if (elem == "Read More") {
+          $("#toggle").text("Read Less");
+          $("#text").slideDown();
+        } else {
+          $("#toggle").text("Read More");
+          $("#text").slideUp();
+        }
+      });
+    });
+</script>
+</form>
+<footer style="text-align: center; color: grey;">
+    <span>
+        Made with lethargy by
+        <a style="color: rgb(192, 165, 43);" href="abhayrane.netlify.app">cyno-benzene</a>.
+    </span>
+</footer>
+
 </body>
+
+
 </html>
