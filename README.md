@@ -2,7 +2,7 @@
 
 <img src="./static/ss.jpg" alt="preview" width="600">
 
-The tool just converts phone number to PNG images that be used as a colorful way to share numbers easily. The idea is to have a way to share phone numbers just like QR codes. Rather the image leaves an abstract pattern which one can stick on to his phone :)
+The tool just converts phone number to PNG images that be used as a colorful way to share numbers easily. The idea is to have a way to share phone numbers just like QR codes. Rather the image leaves an abstract and unique pattern which one can stick on to his phone :)
 
 ### Prerequisites
 Make sure you have installed Python 3 on your device and knowledge about the same.
