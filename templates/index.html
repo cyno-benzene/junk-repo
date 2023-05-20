@@ -45,11 +45,11 @@
 
     <input class="button-4 subm" type="submit" value="Generate" >
     <img id="picture" src="data:image/png;base64,{{ img_data }}" height="300px" width="300px" />
-    <p>Refresh to change color • Right click to save image • Click on title to reset</p>
+    <p>Refresh or regenerate to change color • Right click to save image • Click on title to reset</p>
     <span id="text"> 
-        The tool just converts phone number to PNG images that be used as a colorful way to share numbers easily. There is no   special algorithm used, the number is simply converted to binary. The first 32-33 something bytes in the image can help you calculate the number. Remaining squares are shuffled or reversed strings concantenated according the number of bits (currently just shows 32bits , value can be changed upto 128bit).
+        This just takes the phone number as input, and converts its 256 bit hash array to PNG images that are just represented vibrantly. We have used SHA256 algorithm, the alphanumeric is simply converted to integers. These integers with 64 characters are then reshaped into 8x8 array which is then plotted with colors.   
         
-        The idea is to have a way to share phone numbers just like QR codes. Rather the image leaves an abstract pattern which one can stick on to his phone :)
+        And therefore We get the image with an abstract and unique pattern which can be used as a sticker on their phone :)
     </span>
 <div class="btn-container">
     <button class="button-4" id="toggle">Read More</button>
