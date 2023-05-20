@@ -10,12 +10,6 @@ from flask import Response
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
 
-
-# num = str(num)
-# numed = hashlib.sha256(num.encode())
-# numed = numed.hexdigest()
-# print(des)
-
 def resolute(bit, x):
     x = str(x)
     res = hashlib.sha256(x.encode())
