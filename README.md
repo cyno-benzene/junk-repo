@@ -1,8 +1,8 @@
 # Phone Number Encoder
 
-<img src="./static/ss.jpg" alt="preview" width="600">
+<img src="./static/ss.png" alt="preview" width="600">
 
-The tool just converts phone number to PNG images that be used as a colorful way to share numbers easily. The idea is to have a way to share phone numbers just like QR codes. Rather the image leaves an abstract and unique pattern which one can stick on to his phone :)
+The tool just converts phone number to PNG images that be used as a colorful way to share numbers easily. We get an abstract and unique pattern which one can stick on to his phone :)
 
 ### Prerequisites
 Make sure you have installed Python 3 on your device and knowledge about the same.
@@ -36,9 +36,9 @@ rusty-kolors
   pip install Flask numpy matplotlib  
   </pre>
 
-3. Run command to start the app
+3. Run command in the terminal in the same directory to start the app
   <pre>
   flask run
   </pre>
 4. Link on the link in the terminal directing to <code>localhost:5000</code>
-5. To stop the service interrupt by **CTRL + C**
+5. To stop the service interrupt by **CTRL + C** in the terminal.
