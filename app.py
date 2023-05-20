@@ -21,7 +21,7 @@ def output():
     if request.method == 'POST':
         inp = request.form.to_dict()
         numb = inp['phNo']
-        resolute(0,0,numb)
+        resolute(8,numb)
         encoded_img_data=showOnWeb(token=True)
         cacheWipe()
     return render_template('index.html', img_data=encoded_img_data.decode('utf-8'))
